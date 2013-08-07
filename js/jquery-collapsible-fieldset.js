@@ -6,39 +6,13 @@
 
 (function($) {
   
-	/**
-	 * Collapse/uncollapse the specified fieldset.
-	 * @param {object} $fieldset
-	 * @param {object} options
-	 * @param {boolean} collapse
-	 */
-	function collapse($fieldset, options, collapse) {
-		$container = $fieldset.find("div");
-		if(collapse) {
-			if(options.animation) {
-				$container.slideUp(options.speed);
-			} else {
-				$container.hide();
-			}
-			$fieldset.toggleClass("expanded", "collapsed");
-		} else {
-			if(options.animation) {
-				$container.slideDown(options.speed);
-			} else {
-				$container.show();
-			}
-			$fieldset.toggleClass("collapsed", "expanded");
-		}
-	}
-	
 	$.fn.collapsible = function(options) {
-		var settings = {
+		
+		var settings = $.extend({
 			collapsed: false, 
 			animation: true, 
 			speed: "medium"
-		};
-		
-		$.extend(settings, options);
+		}, options);
 		
 		this.each(function() {
 			var $fieldset = $(this);
@@ -59,5 +33,31 @@
 			}
 			
 		});
-	}
+	};
+	
+	/**
+	 * Collapse/uncollapse the specified fieldset.
+	 * @param {object} $fieldset
+	 * @param {object} options
+	 * @param {boolean} collapse
+	 */
+	function collapse($fieldset, options, doCollapse) {
+		$container = $fieldset.find("div");
+		if(doCollapse) {
+			if(options.animation) {
+				$container.slideUp(options.speed);
+			} else {
+				$container.hide();
+			}
+			$fieldset.toggleClass("expanded", "collapsed");
+		} else {
+			if(options.animation) {
+				$container.slideDown(options.speed);
+			} else {
+				$container.show();
+			}
+			$fieldset.toggleClass("collapsed", "expanded");
+		}
+	};
+	
 })(jQuery);
