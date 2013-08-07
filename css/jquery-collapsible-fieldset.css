@@ -1,0 +1,20 @@
+.collapsible, .collapsible.expanded {
+    
+}
+
+.collapsible.collapsed {
+	
+}
+
+.collapsible legend {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.collapsible legend, .collapsible.expanded legend {
+	background: transparent url("../img/expanded.gif") no-repeat center left;
+}
+
+.collapsible.collapsed legend {
+	background: transparent url("../img/collapsed.gif") no-repeat center left;
+}
