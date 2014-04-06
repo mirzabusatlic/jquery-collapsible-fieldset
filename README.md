@@ -20,3 +20,10 @@ $("fieldset.collapsible").collapsible();
 	</fieldset>
 </form>
 ````
+
+##Options
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| `collapsed` | Set true if fieldset should be collapsed by default. | Boolean | false |
+| `animation` | Should an animation be used when collapsing/expanding fieldset. | Boolean | true |
+| `fade` | This is the speed at which the fieldset animation will occur. Integers in milliseconds are accepted, as well as standard jQuery speed strings (slow, normal, fast). | Integer or String | medium |
