@@ -17,7 +17,7 @@
 		this.each(function() {
 			var $fieldset = $(this);
 			var $legend = $fieldset.children("legend");
-			var isCollapsed = $fieldset.attr("class").search("collapsed") >= 0;
+			var isCollapsed = $fieldset.hasClass("collapsed");
 			
 			$legend.click(function() {
 				collapse($fieldset, settings, !isCollapsed);
@@ -49,14 +49,14 @@
 			} else {
 				$container.hide();
 			}
-			$fieldset.toggleClass("expanded", "collapsed");
+			$fieldset.removeClass("expanded").addClass("collapsed");
 		} else {
 			if(options.animation) {
 				$container.slideDown(options.speed);
 			} else {
 				$container.show();
 			}
-			$fieldset.toggleClass("collapsed", "expanded");
+			$fieldset.removeClass("collapsed").addClass("expanded");
 		}
 	};
 	
