@@ -9,6 +9,7 @@
 .collapsible legend {
 	font-weight: bold;
 	cursor: pointer;
+	padding-left: 10px;
 }
 
 .collapsible legend, .collapsible.expanded legend {
