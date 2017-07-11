@@ -1,10 +1,10 @@
 jquery-collapsible-fieldset
 ===========================
 
-##Overview
+## Overview
 jQuery plugin for Drupal-style collapsible fieldsets.
 
-##Usage
+## Usage
 
 ````javascript
 $("fieldset.collapsible").collapsible();
@@ -21,7 +21,8 @@ $("fieldset.collapsible").collapsible();
 </form>
 ````
 
-##Options
+## Options
+
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `collapsed` | Set true if fieldset should be collapsed by default. | Boolean | false |
